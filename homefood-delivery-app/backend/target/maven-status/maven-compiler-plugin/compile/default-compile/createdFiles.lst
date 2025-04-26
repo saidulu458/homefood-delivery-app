@@ -1,0 +1,4 @@
+com\homefood\controller\MenuController.class
+com\homefood\HomefoodApplication.class
+com\homefood\repository\MenuRepository.class
+com\homefood\model\MenuItem.class

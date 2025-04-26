@@ -1,0 +1,15 @@
+<!-- frontend/app/views/home.html -->
+<div>
+  <p>{{ welcomeMessage }}</p>
+
+  <div ng-if="menuItems.length > 0">
+    <h3>Today's Menu</h3>
+    <ul>
+      <li ng-repeat="item in menuItems">
+        {{ item.name }} - ₹{{ item.price }}
+        <button>Add to Cart</button>
+      </li>
+    </ul>
+  </div>
+</div>
+
