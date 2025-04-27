@@ -9,6 +9,7 @@ phases:
   pre_build:
     commands:
       - echo Pre-build stage
+      - cd backend     # ✅ Move into backend folder (where pom.xml is)
   build:
     commands:
       - echo Build started on `date`
@@ -18,4 +19,4 @@ phases:
       - echo Build completed on `date`
 artifacts:
   files:
-    - target/*.war
+    - backend/target/*.war    # ✅ Important if WAR is inside backend/target/
