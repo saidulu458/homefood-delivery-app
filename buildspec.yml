@@ -13,13 +13,12 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - cd backend    # 👈 add this
-      - mvn clean install
+      - mvn clean install  # Directly build
   post_build:
     commands:
       - echo Build completed on `date`
 artifacts:
   files:
-    - backend/target/*.jar  # 👈 adjust path
+    - target/*.jar
   discard-paths: yes
   name: homefood-backend-artifact
