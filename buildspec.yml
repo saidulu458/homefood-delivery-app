@@ -10,16 +10,16 @@ phases:
   pre_build:
     commands:
       - echo Pre Build Phase Started
-      # - cd backend  <-- ❌ REMOVE this line
   build:
     commands:
       - echo Build started on `date`
+      - cd backend       # 👈 ADD this!!
       - mvn clean install
   post_build:
     commands:
       - echo Build completed on `date`
 artifacts:
   files:
-    - target/*.jar
+    - backend/target/*.jar   # 👈 UPDATE this also
   discard-paths: yes
   name: homefood-backend-artifact
