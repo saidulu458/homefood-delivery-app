@@ -3,20 +3,20 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: corretto11
+      java: corretto17      # ✅ Correct version!
     commands:
-      - echo Installing Java 11
+      - echo Installing Java 17
   pre_build:
     commands:
       - echo Pre-build stage
   build:
     commands:
       - echo Build started on `date`
-      - cd homefood-delivery-app/backend   # ✅ Adjust this if your code is deeper
+      - cd homefood-delivery-app/backend   # or correct path
       - mvn clean install
   post_build:
     commands:
       - echo Build completed on `date`
 artifacts:
   files:
-    - homefood-delivery-app/backend/target/*.war   # ✅ Correct artifact path
+    - homefood-delivery-app/backend/target/*.war
