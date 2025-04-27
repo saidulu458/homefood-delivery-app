@@ -12,11 +12,11 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - cd backend    # ✅ Move into correct folder inside build phase
+      - cd homefood-delivery-app/backend   # ✅ Adjust this if your code is deeper
       - mvn clean install
   post_build:
     commands:
       - echo Build completed on `date`
 artifacts:
   files:
-    - backend/target/*.war   # ✅ Point to correct artifact path
+    - homefood-delivery-app/backend/target/*.war   # ✅ Correct artifact path
