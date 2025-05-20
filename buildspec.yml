@@ -17,6 +17,7 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
+      - chmod +x homefood-delivery-app/backend/scripts/*.sh
 artifacts:
   files:
     - homefood-delivery-app/backend/target/*.jar
