@@ -1,19 +1,19 @@
 version: 0.0
 os: linux
 files:
-  - source: target/homefood-backend-1.0.0.jar
+  - source: homefood-backend-1.0.0.jar
     destination: /opt/tomcat9/webapps/
 
 hooks:
   ApplicationStop:
-    - location: backend/scripts/stop_server.sh
+    - location: scripts/stop_server.sh
       timeout: 20
       runas: root
   ApplicationStart:
-    - location: backend/scripts/start_server.sh
+    - location: scripts/start_server.sh
       timeout: 20
       runas: root
   ValidateService:
-    - location: backend/scripts/validate.sh
+    - location: scripts/validate.sh
       timeout: 15
       runas: root
