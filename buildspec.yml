@@ -22,4 +22,5 @@ artifacts:
     - homefood-delivery-app/backend/target/*.jar
     - homefood-delivery-app/backend/appspec.yml
     - homefood-delivery-app/backend/scripts/*
+  discard-paths: yes
 
