@@ -13,15 +13,12 @@ phases:
     commands:
       - echo Build started on `date`
       - cd homefood-delivery-app/backend
+      - chmod +x scripts/*.sh   # ✅ Fix here
       - mvn clean install
   post_build:
     commands:
       - echo Build completed on `date`
-      - chmod +x homefood-delivery-app/backend/scripts/*.sh
+
 artifacts:
   files:
     - homefood-delivery-app/backend/target/*.jar
-    - homefood-delivery-app/backend/appspec.yml
-    - homefood-delivery-app/backend/scripts/*
-  discard-paths: yes
-
